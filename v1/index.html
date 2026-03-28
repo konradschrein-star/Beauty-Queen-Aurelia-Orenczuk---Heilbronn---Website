@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Beauty Queen Aurelia | Kosmetik & Wimpern Heilbronn</title>
+<meta name="description" content="Beauty Queen Aurelia Orenczuk in Heilbronn: Wimpernverlaengerung, Gesichtsbehandlungen, Manikuere, Pedikuere. Professionelle Kosmetik mit Leidenschaft.">
+<meta name="keywords" content="Kosmetik Heilbronn, Wimpernverlaengerung Heilbronn, Beauty Queen Aurelia, Manikuere Heilbronn, Gesichtsbehandlung Heilbronn">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=Nunito+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--rose:#e8b4b8;--rose-light:#fdf2f3;--sage:#c5d5c5;--ink:#2d2d2d;--off-white:#faf9f7;--gold:#c9a96e}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'Nunito Sans',sans-serif;color:var(--ink);background:var(--off-white);line-height:1.7}
+h1,h2,h3,h4{font-family:'Cormorant Garamond',serif;font-weight:600;line-height:1.2}
+.container{max-width:1200px;margin:0 auto;padding:0 2rem}
+a{text-decoration:none;color:inherit}
+
+/* Nav */
+.nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:1.5rem 0;transition:all .3s}
+.nav.scrolled{background:rgba(255,255,255,.95);backdrop-filter:blur(10px);box-shadow:0 1px 20px rgba(0,0,0,.05);padding:.75rem 0}
+.nav-inner{display:flex;justify-content:space-between;align-items:center}
+.nav-brand{font-family:'Cormorant Garamond',serif;font-size:1.5rem;font-weight:700;color:var(--ink)}
+.nav-links{display:flex;gap:2rem;align-items:center}
+.nav-links a{font-size:.85rem;font-weight:600;letter-spacing:.05em;color:var(--ink);opacity:.6;transition:opacity .3s}
+.nav-links a:hover{opacity:1}
+.nav-cta{background:var(--rose);color:#fff;padding:.6rem 1.5rem;border-radius:50px;font-weight:700;font-size:.8rem;letter-spacing:.05em;transition:all .3s;border:none;cursor:pointer}
+.nav-cta:hover{background:var(--gold);transform:translateY(-2px);box-shadow:0 4px 15px rgba(201,169,110,.3)}
+.mobile-toggle{display:none;background:none;border:none;font-size:1.5rem;cursor:pointer}
+
+/* Hero */
+.hero{min-height:100vh;display:flex;align-items:center;background:linear-gradient(135deg,var(--rose-light) 0%,var(--off-white) 50%,rgba(197,213,197,.15) 100%);position:relative;overflow:hidden;padding-top:6rem}
+.hero-content{max-width:650px}
+.hero-badge{display:inline-flex;align-items:center;gap:.5rem;background:white;padding:.5rem 1rem;border-radius:50px;font-size:.75rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--gold);margin-bottom:2rem;box-shadow:0 2px 20px rgba(0,0,0,.05)}
+.hero h1{font-size:clamp(3rem,7vw,5.5rem);margin-bottom:1.5rem;letter-spacing:-.02em}
+.hero h1 em{color:var(--rose);font-style:italic;font-weight:400}
+.hero p{font-size:1.2rem;color:var(--ink);opacity:.55;margin-bottom:2.5rem;font-weight:300;max-width:500px}
+.hero-btns{display:flex;gap:1rem;flex-wrap:wrap}
+.btn-primary{background:var(--rose);color:#fff;padding:1rem 2.5rem;border-radius:50px;font-weight:700;font-size:.9rem;transition:all .3s;border:none;cursor:pointer}
+.btn-primary:hover{background:var(--gold);transform:translateY(-2px);box-shadow:0 8px 25px rgba(201,169,110,.25)}
+.btn-outline{border:2px solid var(--rose);color:var(--ink);padding:1rem 2.5rem;border-radius:50px;font-weight:700;font-size:.9rem;transition:all .3s;background:transparent}
+.btn-outline:hover{background:var(--rose-light)}
+.hero-img{position:absolute;right:-5%;top:15%;width:50%;height:80%;border-radius:200px 200px 100px 100px;overflow:hidden;opacity:.3}
+.hero-img img{width:100%;height:100%;object-fit:cover}
+
+/* Stats */
+.stats{background:var(--ink);color:#fff;padding:5rem 0}
+.stats-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:2rem;text-align:center}
+.stat-num{font-family:'Cormorant Garamond',serif;font-size:3.5rem;font-weight:700;color:var(--rose);margin-bottom:.5rem}
+.stat-label{font-size:.7rem;text-transform:uppercase;letter-spacing:.2em;opacity:.4;font-weight:700}
+
+/* Services */
+.services{padding:7rem 0;background:white}
+.section-label{font-size:.75rem;text-transform:uppercase;letter-spacing:.3em;color:var(--rose);font-weight:700;margin-bottom:1rem}
+.section-title{font-size:clamp(2.5rem,5vw,4rem);margin-bottom:1rem}
+.services-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:2rem;margin-top:4rem}
+.service-card{background:var(--off-white);border-radius:30px;overflow:hidden;transition:all .4s;border:1px solid rgba(0,0,0,.03)}
+.service-card:hover{transform:translateY(-8px);box-shadow:0 20px 60px rgba(0,0,0,.08)}
+.service-card img{width:100%;height:250px;object-fit:cover}
+.service-card-body{padding:2rem}
+.service-card h3{font-size:1.8rem;margin-bottom:.75rem}
+.service-card p{color:var(--ink);opacity:.5;font-weight:300;margin-bottom:1.5rem}
+.service-meta{display:flex;justify-content:space-between;align-items:center}
+.service-price{font-family:'Cormorant Garamond',serif;font-size:1.5rem;font-weight:700;color:var(--rose)}
+.service-duration{font-size:.75rem;text-transform:uppercase;letter-spacing:.1em;opacity:.4;font-weight:700}
+
+/* About */
+.about{padding:7rem 0;background:var(--off-white)}
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:center}
+.about-img{border-radius:60px;overflow:hidden;box-shadow:0 30px 60px rgba(0,0,0,.1)}
+.about-img img{width:100%;height:auto;display:block}
+.about-text h2{font-size:3.5rem;margin-bottom:1.5rem}
+.about-text p{color:var(--ink);opacity:.55;font-weight:300;font-size:1.1rem;margin-bottom:1.5rem}
+.about-quote{padding:1.5rem 2rem;background:white;border-left:4px solid var(--rose);border-radius:0 20px 20px 0;font-family:'Cormorant Garamond',serif;font-size:1.3rem;font-style:italic;color:var(--ink);margin:2rem 0}
+
+/* Reviews */
+.reviews{padding:7rem 0;background:white}
+.reviews-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:2rem;margin-top:4rem}
+.review-card{background:var(--off-white);padding:2.5rem;border-radius:30px;border:1px solid rgba(0,0,0,.03)}
+.review-stars{color:var(--gold);font-size:1.2rem;margin-bottom:1rem}
+.review-text{font-family:'Cormorant Garamond',serif;font-size:1.3rem;font-style:italic;color:var(--ink);opacity:.8;margin-bottom:1.5rem;line-height:1.5}
+.review-author{font-size:.8rem;font-weight:700;text-transform:uppercase;letter-spacing:.1em;opacity:.4}
+
+/* Contact */
+.contact{padding:7rem 0;background:var(--off-white)}
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:4rem;margin-top:4rem}
+.contact-info{display:flex;flex-direction:column;gap:2rem}
+.contact-item{display:flex;align-items:flex-start;gap:1.5rem}
+.contact-icon{width:50px;height:50px;background:var(--rose-light);border-radius:15px;display:flex;align-items:center;justify-content:center;color:var(--rose);font-size:1.2rem;flex-shrink:0}
+.contact-item h4{font-family:'Cormorant Garamond',serif;font-size:1.3rem;margin-bottom:.25rem}
+.contact-item p{opacity:.5;font-weight:300}
+.contact-map{border-radius:30px;overflow:hidden;min-height:400px;background:var(--rose-light)}
+.contact-map iframe{width:100%;height:100%;border:0;min-height:400px}
+
+/* CTA */
+.cta-section{background:var(--ink);color:#fff;padding:7rem 0;text-align:center}
+.cta-section h2{font-size:clamp(2.5rem,5vw,4.5rem);margin-bottom:1.5rem}
+.cta-section h2 em{color:var(--rose);font-style:italic;font-weight:400}
+.cta-section p{opacity:.4;font-weight:300;font-size:1.2rem;max-width:600px;margin:0 auto 3rem}
+
+/* Footer */
+.footer{background:var(--ink);color:#fff;padding:3rem 0;border-top:1px solid rgba(255,255,255,.05)}
+.footer-inner{display:flex;justify-content:space-between;align-items:center;font-size:.8rem;opacity:.3}
+.footer a{color:var(--rose);opacity:1}
+
+@media(max-width:768px){
+  .nav-links{display:none}
+  .mobile-toggle{display:block}
+  .hero-img{display:none}
+  .stats-grid{grid-template-columns:repeat(2,1fr)}
+  .about-grid,.contact-grid{grid-template-columns:1fr}
+  .services-grid{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+
+<nav class="nav" id="nav">
+  <div class="container nav-inner">
+    <a href="#" class="nav-brand">Beauty Queen Aurelia</a>
+    <div class="nav-links">
+      <a href="#services">Leistungen</a>
+      <a href="#about">Ueber mich</a>
+      <a href="#reviews">Bewertungen</a>
+      <a href="#contact">Kontakt</a>
+      <button class="nav-cta" onclick="location.href='#contact'">Termin anfragen</button>
+    </div>
+    <button class="mobile-toggle" onclick="document.querySelector('.nav-links').style.display=document.querySelector('.nav-links').style.display==='flex'?'none':'flex'">&#9776;</button>
+  </div>
+</nav>
+
+<section class="hero" id="home">
+  <div class="container hero-content">
+    <div class="hero-badge">&#9733; Professionelle Kosmetik in Heilbronn</div>
+    <h1>Beauty Queen<br><em>Aurelia</em></h1>
+    <p>Dein exklusives Kosmetikstudio in Heilbronn. Wimpernverlaengerung, Gesichtsbehandlungen, Manikuere und mehr &ndash; mit Leidenschaft und Praezision.</p>
+    <div class="hero-btns">
+      <a href="#contact" class="btn-primary">Termin anfragen</a>
+      <a href="#services" class="btn-outline">Leistungen ansehen</a>
+    </div>
+  </div>
+  <div class="hero-img"><img src="https://images.unsplash.com/photo-1560066984-138dadb4c035?w=800&h=1000&fit=crop" alt="Beauty Queen Aurelia Kosmetikstudio Heilbronn"></div>
+</section>
+
+<section class="stats">
+  <div class="container">
+    <div class="stats-grid">
+      <div><div class="stat-num">500+</div><div class="stat-label">Zufriedene Kundinnen</div></div>
+      <div><div class="stat-num">5.0</div><div class="stat-label">Sterne Bewertung</div></div>
+      <div><div class="stat-num">15+</div><div class="stat-label">Behandlungen</div></div>
+      <div><div class="stat-num">100%</div><div class="stat-label">Leidenschaft</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="services" id="services">
+  <div class="container">
+    <div class="section-label">Unsere Expertise</div>
+    <h2 class="section-title">Premium-Behandlungen</h2>
+    <div class="services-grid">
+      <div class="service-card">
+        <img src="https://images.unsplash.com/photo-1583001931096-959e9a1a6223?w=600&h=400&fit=crop" alt="Wimpernverlaengerung Heilbronn">
+        <div class="service-card-body">
+          <h3>Wimpernverlaengerung</h3>
+          <p>Perfekte Wimpern fuer einen natuerlichen Look oder dramatisches Volumen. Jede Wimper wird mit hoechster Praezision appliziert.</p>
+          <div class="service-meta"><span class="service-price">ab 89&#8364;</span><span class="service-duration">90-120 Min</span></div>
+        </div>
+      </div>
+      <div class="service-card">
+        <img src="https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?w=600&h=400&fit=crop" alt="Gesichtsbehandlung Heilbronn">
+        <div class="service-card-body">
+          <h3>Gesichtsbehandlungen</h3>
+          <p>Individuelle Facials mit exklusiven Wirkstoffen. Analyse deiner Hautbeduerfnisse fuer strahlende Ergebnisse.</p>
+          <div class="service-meta"><span class="service-price">ab 69&#8364;</span><span class="service-duration">60-90 Min</span></div>
+        </div>
+      </div>
+      <div class="service-card">
+        <img src="https://images.unsplash.com/photo-1604654894610-df63bc536371?w=600&h=400&fit=crop" alt="Manikuere Heilbronn">
+        <div class="service-card-body">
+          <h3>Manikuere &amp; Shellac</h3>
+          <p>Praezise Formgebung, sanfte Nagelhautpflege und langanhaltender Shellac-Glanz der bis zu drei Wochen haelt.</p>
+          <div class="service-meta"><span class="service-price">ab 35&#8364;</span><span class="service-duration">45-60 Min</span></div>
+        </div>
+      </div>
+      <div class="service-card">
+        <img src="https://images.unsplash.com/photo-1519823551278-64ac92734fb1?w=600&h=400&fit=crop" alt="Pedikuere Heilbronn">
+        <div class="service-card-body">
+          <h3>Pedikuere</h3>
+          <p>Professionelle Fusspflege fuer seidig glatte Haut und perfekt gepflegte Naegel. Ein Gefuehl wie auf Wolken.</p>
+          <div class="service-meta"><span class="service-price">ab 39&#8364;</span><span class="service-duration">60 Min</span></div>
+        </div>
+      </div>
+      <div class="service-card">
+        <img src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=600&h=400&fit=crop" alt="Augenbrauen Heilbronn">
+        <div class="service-card-body">
+          <h3>Brauen &amp; Lifting</h3>
+          <p>Brow Lifting fuer Fuelle, Form und Ausdruckskraft. Perfekte Brauen die wochenlang halten.</p>
+          <div class="service-meta"><span class="service-price">ab 39&#8364;</span><span class="service-duration">45 Min</span></div>
+        </div>
+      </div>
+      <div class="service-card">
+        <img src="https://images.unsplash.com/photo-1487412912498-0447578fcca8?w=600&h=400&fit=crop" alt="Make-Up Heilbronn">
+        <div class="service-card-body">
+          <h3>Make-Up &amp; Styling</h3>
+          <p>Professionelles Make-Up fuer besondere Anlaesse, Hochzeiten und Events. Dein perfekter Auftritt garantiert.</p>
+          <div class="service-meta"><span class="service-price">ab 59&#8364;</span><span class="service-duration">60 Min</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="about" id="about">
+  <div class="container">
+    <div class="about-grid">
+      <div class="about-img"><img src="https://images.unsplash.com/photo-1560066984-138dadb4c035?w=700&h=900&fit=crop" alt="Beauty Queen Aurelia Orenczuk Heilbronn"></div>
+      <div class="about-text">
+        <div class="section-label">Die Inhaberin</div>
+        <h2>Aurelia Orenczuk</h2>
+        <p>Willkommen bei Beauty Queen Aurelia. Mit Leidenschaft und Praezision widme ich mich deiner natuerlichen Schoenheit. In meinem Studio in Heilbronn biete ich dir exklusive Behandlungen in entspannter Atmosphaere.</p>
+        <p>Ob Wimpernverlaengerung, Gesichtspflege oder professionelle Manikuere &ndash; bei mir stehst du im Mittelpunkt. Jede Behandlung ist ein Unikat, genau wie du.</p>
+        <div class="about-quote">&bdquo;Schoenheit ist kein Standard &ndash; sie ist so individuell wie du selbst.&ldquo;</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="reviews" id="reviews">
+  <div class="container">
+    <div class="section-label">Kundenstimmen</div>
+    <h2 class="section-title">Was unsere Kundinnen sagen</h2>
+    <div class="reviews-grid">
+      <div class="review-card">
+        <div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <div class="review-text">&bdquo;Absolut professionell! Aurelia nimmt sich wirklich Zeit und das Ergebnis ist jedes Mal perfekt. Bestes Kosmetikstudio in Heilbronn.&ldquo;</div>
+        <div class="review-author">Lena M.</div>
+      </div>
+      <div class="review-card">
+        <div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <div class="review-text">&bdquo;Meine Wimpern sehen fantastisch aus! Natuerlich und trotzdem ausdrucksstark. Ich komme immer wieder gerne.&ldquo;</div>
+        <div class="review-author">Sandra K.</div>
+      </div>
+      <div class="review-card">
+        <div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <div class="review-text">&bdquo;Super nette Atmosphaere und top Ergebnis bei der Gesichtsbehandlung. Fuehle mich wie neu! Absolute Empfehlung.&ldquo;</div>
+        <div class="review-author">Nina W.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <div class="container">
+    <div class="section-label">Kontakt &amp; Anfahrt</div>
+    <h2 class="section-title">Buche deinen Moment</h2>
+    <div class="contact-grid">
+      <div class="contact-info">
+        <div class="contact-item">
+          <div class="contact-icon">&#9906;</div>
+          <div><h4>Adresse</h4><p>Heilbronn<br>(Genaue Adresse auf Anfrage)</p></div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-icon">&#9742;</div>
+          <div><h4>Telefon</h4><p>Auf Anfrage</p></div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-icon">&#9993;</div>
+          <div><h4>E-Mail</h4><p>info@beauty-queen-aurelia.de</p></div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-icon">&#9201;</div>
+          <div><h4>Oeffnungszeiten</h4><p>Nach Vereinbarung</p></div>
+        </div>
+      </div>
+      <div class="contact-map">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d41700!2d9.2!3d49.14!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47982e0!2sHeilbronn!5e0!3m2!1sde!2sde!4v1" allowfullscreen loading="lazy" title="Beauty Queen Aurelia Heilbronn"></iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="cta-section">
+  <h2>Bereit fuer dein<br><em>Strahlen?</em></h2>
+  <p>Buche jetzt deinen exklusiven Termin bei Beauty Queen Aurelia und erlebe Schoenheit auf einem neuen Level.</p>
+  <a href="#contact" class="btn-primary" style="font-size:1.2rem;padding:1.2rem 3rem">Termin anfragen</a>
+</section>
+
+<footer class="footer">
+  <div class="container footer-inner">
+    <span>&copy; 2026 Beauty Queen Aurelia &ndash; Heilbronn</span>
+    <span>Webdesign von <a href="https://axtrelis.com" target="_blank" rel="noopener">Axtrelis.com</a></span>
+  </div>
+</footer>
+
+<script>
+window.addEventListener('scroll',function(){document.getElementById('nav').classList.toggle('scrolled',window.scrollY>50)});
+</script>
+</body>
+</html>
